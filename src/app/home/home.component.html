@@ -1,1 +1,5 @@
-<google-map></google-map>
+<google-map (mapClick)="addLocation($event)">
+  @for(marker of markers; track marker) {
+  <map-marker [position]="marker" [options]="markerOptions"></map-marker>
+  }
+</google-map>
