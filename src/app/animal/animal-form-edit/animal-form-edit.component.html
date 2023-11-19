@@ -1,0 +1,11 @@
+<div class="form">
+    <google-map (mapClick)="addMarker($event)" class="map">
+        <map-marker [position]="marker"></map-marker>
+    </google-map>
+
+    <input type="text" id="fname" name="firstname" placeholder="Type" [(ngModel)]="animal.type">
+
+    <textarea name="textarea" id="textarea" placeholder="Enter message" class="textarea" [(ngModel)]="animal.description"></textarea>
+
+    <button class="button-17" (click)="send()" routerLink="">Send</button>
+</div>

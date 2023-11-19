@@ -1,5 +1,8 @@
-<google-map (mapClick)="addLocation($event)">
-  @for(marker of markers; track marker) {
-  <map-marker [position]="marker" [options]="markerOptions"></map-marker>
-  }
+<google-map>
+<!--  @for(marker of markers; track marker) {-->
+<!--  <map-marker [position]="marker" [options]="markerOptions"></map-marker>-->
+<!--  }-->
+    <map-marker *ngFor="let marker of markers" [position]="marker"></map-marker>
 </google-map>
+
+<button routerLink="animal-add" style="width: 8rem; height: 3rem; background-color: blue">Add animal</button>
